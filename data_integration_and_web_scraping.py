@@ -5,47 +5,6 @@
 # Name: Hazel Titley
 # 
 # Date: 25/10/2021
-# 
-# Environment: Python 3.7.9 and Anaconda 2020.11
-# 
-# Libraries used:
-# * pandas
-# * numpy
-# * BeautifulSoup
-# * requests
-# * datetime
-# * statistics
-# * PyPDF2
-# * re
-# * ast
-# * math
-# * sklearn (specifically haversine_distance and preprocessing)
-# * matplotlib
-# * scipy
-# * shapely
-# * shapefile
-# 
-# This code aims to integrate data from multiple sources, to form a pool of property and covid data. The code is split into two main tasks. In Task 1, the suburb, LGA, closest train station, fastest route to Melbourne Central (MC), and covid data for each property must be deterined. To achieve this, the code is broken into multiple parts. Task 2 deals with exploration of the covid data, and using preceeding case averages to determine the case data for September 30th. The breakdown of the code is as follows: <br>
-# Part 0:
-# - importing libraries and data <br>
-# <br>
-# Task 1:
-# - Part 1: adding data defaults
-# - Part 2: calculating suburb
-# - Part 3: filling in LGA
-# - Part 4: determining closest train station
-# - Part 5: determining min travel time to MC
-# - Part 6: web scraping to find covid data
-# - Part 7: fixing data to match sample output
-# - Part 8: exporting data to csv <br>
-# <br>
-# Task 2:
-# - Part 1: data exploration
-# - Part 2: linear model building
-# 
-# Each part is outlined in more detail within each section.
-# <br>
-# Note: Please ensure that the data is stored in the same directory as this jupyter file, otherwise the code will not run.
 
 # ## Part 0 - Importing libraries and data
 # before any data can be processed, it needs to read in to the working memory, and the relevant libraries imported. the base datasets (consisting of property locations and ids) are concatenated and duplicates removed to form a cleaned dataset. this data forms the basis of all later computations. that is, it is these properties for which the suburb, train station, and covid data is found. for this reason, it is important to ensure all properties are captured, as missing any values at this point would result in more missing data later on.
